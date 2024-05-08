@@ -1,26 +1,10 @@
-
-# -----------------------------------------------------------------------------
-# This script is provided as a convenience for Level.io customers. We cannot 
-# guarantee this will work in all environments. Please test before deploying
-# to your production environment. We welcome contribution to the scripts in 
-# our community repo!
-# -----------------------------------------------------------------------------
-#
 # -----------------------------------------------------------------------------
 # Script Configuration
 # -----------------------------------------------------------------------------
 # Name: Domain controller health check
 # Description: This script runs a series of helath checks on an Active 
 # Directory Domain Controller and reports on any errors.
-#
-# Credit to Ali Tajran.  Much of his DC health script was used to create this.
-# https://www.alitajran.com/active-directory-health-check-powershell-script/
-#
-#
-# Language: PowerShell
-# Timeout: 300
-# Version: 1.0
-#
+
 # -----------------------------------------------------------------------------
 # Monitor Configuration
 # -----------------------------------------------------------------------------
