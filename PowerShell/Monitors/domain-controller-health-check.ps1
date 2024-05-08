@@ -415,3 +415,19 @@ if ($errorCount -gt 0) {
 else {
     Write-Host "Summary: No Errors Detected"
 }
+# Email Results
+# Define email parameters
+$from = "josh@bynexcorp.com"
+$to = "josh@bynexcorp.com"
+$subject = "Domain Controller Health Check Results"
+$body = $output  # Assuming $output contains the formatted results
+$smtpServer = "mail.smtp2go.com"
+$smtpPort = 587  # Update with your SMTP port
+$username = "bynex"
+$password = ConvertTo-SecureString "Y3o3cHJyZGQ2aTgw" -AsPlainText -Force
+
+# Create email credentials
+$credential = New-Object System.Management.Automation.PSCredential ($username, $password)
+
+# Send email
+Send-MailMessage -From $from -To $to -Subject $subject -Body $body -SmtpServer $smtpServer -Port $smtpPort -Credential $credential -UseSsl
