@@ -417,8 +417,8 @@ $subject = $output2
 $body = $output  # Assuming $output contains the formatted results
 $smtpServer = "mail.smtp2go.com"
 $smtpPort = 587  # Update with your SMTP port
-$username = "bynex"
-$password = ConvertTo-SecureString "Y3o3cHJyZGQ2aTgw" -AsPlainText -Force
+$username = "adalert234"
+$password = ConvertTo-SecureString "w0Os8UNEYphHJvMT" -AsPlainText -Force
 
 # Create email credentials
 $credential = New-Object System.Management.Automation.PSCredential ($username, $password)
