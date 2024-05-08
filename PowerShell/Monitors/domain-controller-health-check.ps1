@@ -415,11 +415,21 @@ if ($errorCount -gt 0) {
 else {
     Write-Host "Summary: No Errors Detected"
 }
+
+# Generate output2 and insert into subject
+# Output2: Display alert summary
+if ($errorCount -gt 0) {
+    $output2 = "Summary: $errorCount Error(s) Detected"
+}
+else {
+    $output2 = "Summary: No Errors Detected"
+}
+
 # Email Results
 # Define email parameters
 $from = "josh@bynexcorp.com"
 $to = "josh@bynexcorp.com"
-$subject = "Domain Controller Health Check Results"
+$subject = $output2
 $body = $output  # Assuming $output contains the formatted results
 $smtpServer = "mail.smtp2go.com"
 $smtpPort = 587  # Update with your SMTP port
